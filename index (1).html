@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia Saúde é Vida | Indiaroba - SE | Sua Saúde em Primeiro Lugar</title>
+    <meta name="description" content="Farmácia Saúde é Vida em Indiaroba: medicamentos, beleza e bem-estar com preços imbatíveis. Atendimento humanizado, entrega rápida e promoções exclusivas.">
+    <meta name="keywords" content="farmácia Indiaroba, medicamentos, beleza, saúde, bem-estar, promoções, entrega rápida">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Farmácia Saúde é Vida - Indiaroba, SE">
+    <meta property="og:description" content="A melhor farmácia de Indiaroba com atendimento personalizado e preços acessíveis.">
+    <meta property="og:image" content="https://i.postimg.cc/YqDH8yBh/farmaciasaudeevida-indiaroba-14040121-074750486.jpg">
+    <meta property="og:url" content="https://www.farmaciasaudeevida.com">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/YqDH8yBh/farmaciasaudeevida-indiaroba-14040121-074750486.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary: #E63946;
+            --primary-dark: #B91C1C;
+            --secondary: #FFD700;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: padding 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 10px 30px;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-search {
+            position: relative;
+        }
+
+        .nav-search input {
+            padding: 8px 40px 8px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .nav-search input:focus {
+            border-color: var(--primary);
+        }
+
+        .nav-search i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .nav-whatsapp {
+            background: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-whatsapp:hover {
+            background: var(--primary-dark);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+            z-index: 1001;
+        }
+
+        header {
+            background: var(--gradient), url('https://i.postimg.cc/Fz9jfN1r/Screenshot-20250409-124527-Honista-2.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1;
+        }
+
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+            animation: pulse 2s infinite alternate;
+        }
+
+        .logo {
+            width: 220px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle, rgba(255,215,0,0.6) 0%, rgba(255,215,0,0) 70%);
+            border-radius: 50%;
+            animation: glow 3s infinite alternate;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            animation: slideDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        .scroll-down {
+  margin-top: 20px;
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+        }
+
+        .promo-bar {
+            position: sticky;
+            top: 70px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 999;
+            animation: slideDown 1s ease-out;
+        }
+
+        .promo-bar span {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        section {
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .diferenciais {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .diferencial-item {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .diferencial-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+            transition: height 0.4s ease;
+        }
+
+        .diferencial-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .diferencial-item:hover::before {
+            height: 10px;
+            background: var(--secondary);
+        }
+
+        .diferencial-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .diferencial-item:hover .diferencial-icon {
+            transform: scale(1.1);
+            color: var(--secondary);
+        }
+
+        .diferencial-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .diferencial-item p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .ofertas-section {
+            background: linear-gradient(135deg, #FFF1F1 0%, #FFE6E6 100%);
+        }
+
+        .ofertas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .oferta-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .oferta-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .oferta-img {
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .oferta-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .oferta-card:hover .oferta-img img {
+            transform: scale(1.08);
+        }
+
+        .oferta-content {
+            padding: 25px;
+        }
+
+        .oferta-tag {
+            background: var(--primary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .oferta-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .oferta-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .new-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .countdown {
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .btn-oferta {
+            background: var(--primary);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-oferta:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .dicas-section {
+            background: yellow(--gradient);
+            color: red;
+        }
+
+        .dicas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 25px;
+            padding: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .dicas-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .dicas-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        .dicas-container::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 8px;
+        }
+
+        .dica-card {
+            min-width: 300px;
+            scroll-snap-align: start;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .dica-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .dica-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .dica-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .dica-card:hover .dica-img img {
+            transform: scale(1.08);
+        }
+
+        .dica-content {
+            padding: 20px;
+        }
+
+        .dica-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .dica-content p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .info-contato {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+
+        .info-item {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-icon {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-item:hover .info-icon {
+            transform: scale(1.1);
+        }
+
+        .info-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .info-item p, .info-item a {
+            color: var(--gray);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-item a:hover {
+            color: var(--primary);
+        }
+
+        .galeria-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            height: 260px;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(230, 57, 70, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            opacity: 1;
+        }
+
+        .galeria-overlay i {
+            color: white;
+            font-size: 2.5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 20px 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            font-size: 1rem;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+            padding-left: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0% { opacity: 0.4; }
+            100% { opacity: 0.6; }
+        }
+
+        section, .diferencial-item, .oferta-card, .dica-card, .info-item, .galeria-item {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease-out;
+        }
+
+        section.animate, .diferencial-item.animate, .oferta-card.animate, .dica-card.animate, .info-item.animate, .galeria-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 20px;
+                flex-wrap: wrap;
+            }
+
+            .hamburger {
+                display: block;
+                order: -1;
+            }
+
+            .nav-container {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                z-index: 1000;
+                animation: slideIn 0.3s ease-out;
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-search input {
+                width: 80%;
+                max-width: 300px;
+                padding: 10px 45px 10px 20px;
+                font-size: 1rem;
+            }
+
+            .nav-search i {
+                right: 20px;
+                font-size: 1rem;
+            }
+
+            .nav-whatsapp {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            header {
+                padding: 100px 20px;
+                min-height: 80vh;
+            }
+
+            .logo {
+                width: 180px;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+                max-width: 90%;
+            }
+
+            .btn-primary {
+                padding: 12px 40px;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .ofertas-container {
+                gap: 20px;
+            }
+
+            .dicas-container {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo {
+                width: 160px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .diferencial-item {
+                padding: 30px 20px;
+            }
+
+            .oferta-card {
+                margin-bottom: 20px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.5rem;
+            }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-bar">
+        🚚 <span>Fazemos Delivery</span>! Aproveite agora! 🛒
+    </div>
+
+    <nav>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-logo">
+            <img src="https://i.postimg.cc/YqDH8yBh/farmaciasaudeevida-indiaroba-14040121-074750486.jpg" alt="Farmácia Saúde é Vida Logo" loading="lazy">
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#ofertas">Ofertas</a>
+                <a href="#dicas">Dicas de Saúde</a>
+                <a href="#localizacao">Localização</a>
+                <a href="#galeria">Galeria</a>
+            </div>
+            <div class="nav-cta">
+                <div class="nav-search">
+                    <input type="text" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a href="https://wa.me/5579998528091?text=Olá! Quero saber mais!" class="nav-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <img src="https://i.postimg.cc/YqDH8yBh/farmaciasaudeevida-indiaroba-14040121-074750486.jpg" alt="Farmácia Saúde é Vida Logo" class="logo" loading="lazy">
+        </div>
+        <h1>Farmácia Saúde é Vida</h1>
+        <p>Sua saúde e bem-estar com preços imbatíveis em Indiaroba</p>
+        <a href="https://wa.me/5579998528091?text=Olá! Quero saber mais sobre suas ofertas!" class="btn-primary">
+            <i class="fab fa-whatsapp"></i> Fale Conosco Agora
+        </a>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="diferenciais">
+        <div class="section-title">
+            <h2>Por Que Escolher a Saúde é Vida?</h2>
+            <p>Qualidade, confiança e atendimento que fazem a diferença</p>
+        </div>
+        <div class="diferenciais">
+            <div class="diferencial-item">
+                <div class="diferencial-icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <h3>Medicamentos</h3>
+                <p>Genéricos, de marca e manipulados com garantia de excelência e procedência.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="diferencial-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Beleza & Cuidado</h3>
+                <p>Marcas premium para realçar sua beleza e cuidado diário com pele e cabelos.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="diferencial-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Atendimento</h3>
+                <p>Personalizado, com carinho e dedicação para você e sua família.</p>
+            </div>
+            <div class="diferencial-item">
+                <div class="diferencial-icon">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <h3>Promoções</h3>
+                <p>Ofertas exclusivas que cabem no seu bolso e facilitam seu cuidado com a saúde.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ofertas-section" id="ofertas">
+        <div class="section-title">
+            <h2>Ofertas Imperdíveis</h2>
+            <p>Cuide de si com economia e qualidade. Aproveite nossas promoções exclusivas!</p>
+        </div>
+        <div class="ofertas-container">
+            <div class="oferta-card">
+                <div class="oferta-img">
+                    <img src="https://i.postimg.cc/FK4wHC09/farmaciasaudeevida-indiaroba-14040121-220942696.jpg" alt="Creatina Hardcore" loading="lazy">
+                </div>
+                <div class="oferta-content">
+                    <span class="oferta-tag">Oferta Relâmpago</span>
+                    <h3 class="oferta-title">Creatina Hardcore</h3>
+                    <div class="oferta-price">
+                        <span class="old-price">R$ 83,93</span>
+                        <span class="new-price">R$ 55,00</span>
+                    </div>
+                    <div class="countdown" id="countdown-1">Termina em: <span></span></div>
+                    <a href="https://wa.me/5579998528091?text=Quero comprar a Creatina Hardcore com desconto!" class="btn-oferta">
+                        <i class="fab fa-whatsapp"></i> Comprar Agora
+                    </a>
+                </div>
+            </div>
+            <div class="oferta-card">
+                <div class="oferta-img">
+                    <img src="https://i.postimg.cc/sgDwHFPG/farmaciasaudeevida-indiaroba-14040121-220919160.jpg" alt="Combo Siàge Glow Expert" loading="lazy">
+                </div>
+                <div class="oferta-content">
+                    <span class="oferta-tag">Lançamento</span>
+                    <h3 class="oferta-title">Combo Siàge Glow Expert</h3>
+                    <div class="oferta-price">
+                        <span class="old-price">R$ 220,96</span>
+                        <span class="new-price">R$ 185,00</span>
+                    </div>
+                    <div class="countdown" id="countdown-2">Termina em: <span></span></div>
+                    <a href="https://wa.me/5579998528091?text=Quero comprar o Combo Siàge Glow Expert com desconto!" class="btn-oferta">
+                        <i class="fab fa-whatsapp"></i> Comprar Agora
+                    </a>
+                </div>
+            </div>
+            <div class="oferta-card">
+                <div class="oferta-img">
+                    <img src="https://i.postimg.cc/tgszGQ64/farmaciasaudeevida-indiaroba-14040122-103430531.jpg" alt="Creme Clareador Corporal" loading="lazy">
+                </div>
+                <div class="oferta-content">
+                    <span class="oferta-tag">Desconto Especial</span>
+                    <h3 class="oferta-title">Creme Clareador Corporal</h3>
+                    <div class="oferta-price">
+                        <span class="old-price">R$ 43,90</span>
+                        <span class="new-price">R$ 40,00</span>
+                    </div>
+                    <div class="countdown" id="countdown-3">Termina em: <span></span></div>
+                    <a href="https://wa.me/5579998528091?text=Quero comprar o Creme Clareador Corporal com desconto!" class="btn-oferta">
+                        <i class="fab fa-whatsapp"></i> Comprar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dicas-section" id="dicas">
+        <div class="section-title">
+            <h2>Dicas de Saúde</h2>
+            <p>Conheça nossas recomendações para uma vida mais saudável</p>
+        </div>
+        <div class="dicas-container">
+            <div class="dica-card">
+                <div class="dica-img">
+                    <img src="https://i.postimg.cc/GtyvVCFD/images-1.jpg" alt="Importância das Vitaminas" loading="lazy">
+                </div>
+                <div class="dica-content">
+                    <h3>Importância das Vitaminas</h3>
+                    <p>Saiba como as vitaminas podem melhorar sua imunidade e qualidade de vida.</p>
+                </div>
+            </div>
+            <div class="dica-card">
+                <div class="dica-img">
+                    <img src="https://i.postimg.cc/76TCYN58/istockphoto-1289220585-612x612.jpg" alt="Cuidados com a Pele" loading="lazy">
+                </div>
+                <div class="dica-content">
+                    <h3>Cuidados com a Pele</h3>
+                    <p>Descubra os melhores produtos para manter sua pele saudável em todas as estações.</p>
+                </div>
+            </div>
+            <div class="dica-card">
+                <div class="dica-img">
+                    <img src="https://i.postimg.cc/XvBNwY49/images-2.jpg" alt="Prevenção de Doenças" loading="lazy">
+                </div>
+                <div class="dica-content">
+                    <h3>Prevenção de Doenças</h3>
+                    <p>Medidas simples que podem ajudar a prevenir diversas doenças comuns.</p>
+                </div>
+            </div>
+            <div class="dica-card">
+                <div class="dica-img">
+                    <img src="https://i.postimg.cc/2y0NssCz/images-3.jpg" alt="Saúde Mental" loading="lazy">
+                </div>
+                <div class="dica-content">
+                    <h3>Saúde Mental</h3>
+                    <p>Como cuidar da sua saúde mental e bem-estar emocional no dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao">
+        <div class="section-title">
+            <h2>Nossa Localização</h2>
+            <p>Venha nos visitar e conhecer nosso espaço acolhedor</p>
+        </div>
+        <div class="info-contato">
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Endereço</h3>
+                <p>Avenida Presidente Getúlio Vargas, 225<br>Indiaroba, SE - 49250-000</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Horário</h3>
+                <p>Segunda a Sábado<br>8h às 19h</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Contato</h3>
+                <p><a href="https://wa.me/5579998528091" aria-label="Contato via WhatsApp">(79) 99985-28091</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="section-title">
+            <h2>Nossa Farmácia</h2>
+            <p>Conheça nosso espaço e equipe dedicada</p>
+        </div>
+        <div class="galeria-container">
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://i.postimg.cc/Fz9jfN1r/Screenshot-20250409-124527-Honista-2.jpg" alt="Fachada da Farmácia" loading="lazy">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://i.postimg.cc/C1GXWBjd/farmaciasaudeevida-indiaroba-14040121-124732622.jpg" alt="Interior da Farmácia" loading="lazy">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5579998528091?text=Olá! Quero saber mais!" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Farmácia Saúde e Vida</h3>
+                <p>Sua saúde e bem-estar em primeiro lugar em Indiaroba. Atendimento humanizado e produtos de qualidade desde 2010.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/farmaciasaudeevida_indiaroba?igsh=MTNramYzNXB1MmFrNQ==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5579998528091" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#dicas">Dicas de Saúde</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Getúlio Vargas, 225 - Indiaroba/SE</p>
+                <p><i class="fas fa-phone"></i> (79) 99985-28091</p>
+                <p><i class="fas fa-envelope"></i> contato@farmaciasaudeevida.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Farmácia Saúde e Vida. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navContainer = document.querySelector('.nav-container');
+        hamburger.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+       anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (navContainer.classList.contains('active')) {
+                    navContainer.classList.remove('active');
+                    hamburger.querySelector('i').classList.toggle('fa-bars');
+                    hamburger.querySelector('i').classList.toggle('fa-times');
+                }
+            });
+        });
+
+        document.querySelector('.scroll-down').addEventListener('click', () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        function startCountdown(elementId, endTime) {
+            const countdownElement = document.querySelector(`#${elementId} span`);
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                if (distance < 0) {
+                    countdownElement.textContent = "Oferta Expirada!";
+                    return;
+                }
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdownElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
+                setTimeout(updateCountdown, 1000);
+            };
+            updateCountdown();
+        }
+
+        const endTime = new Date().getTime() + 24 * 60 * 60 * 1000;
+        startCountdown('countdown-1', endTime);
+        startCountdown('countdown-2', endTime);
+        startCountdown('countdown-3', endTime);
+
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('section, .diferencial-item, .oferta-card, .dica-card, .info-item, .galeria-item');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85) {
+                    element.classList.add('animate');
+                }
+            });
+        };
+
+        document.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        });
+    </script>
+</body>
+</html>
